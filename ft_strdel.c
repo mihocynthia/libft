@@ -6,15 +6,19 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:42:43 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 17:45:34 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/20 10:55:34 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
-
+//  char *as
+//ft_strdel(&as) // at this address
+void    ft_strdel(char **as)
 {
-    free(*as);
-    as = 0;
+    if (as == NULL || *as == NULL)
+        return (void)(NULL);
+    if(as != NULL && *as != NULL)
+        free(*as);
+    *as = NULL;
 }

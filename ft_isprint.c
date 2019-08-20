@@ -6,14 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 18:30:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 19:00:24 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/20 10:45:54 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     isprint(int c)
+int     ft_isprint(int c)
 {
-    ft_isacii(c);
-    Only >= ' ' && <= '~';
+    return(c >= ' ' && c <= '~');
 }

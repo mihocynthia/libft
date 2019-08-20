@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 18:43:00 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/20 10:56:31 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ int		ft_atoi(const char *str);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int     ft_isalnum(int c);
+int     ft_isascii(int c);
+int     ft_isprint(int c);
+int		ft_strncpy(char *dest, char *src, unsigned int nl); //test later
 
 
 void	ft_putnbr(int n);
@@ -35,5 +38,3 @@ void    ft_putendl(char const *s);
 void    ft_putendl_fd(char const *s, int fd);
 void    ft_strdel(char **as);
 void    ft_strclr(char *s);
-int     isascii(int c);
-int     isprint(int c);

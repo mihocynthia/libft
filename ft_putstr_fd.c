@@ -6,11 +6,10 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 16:14:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 11:42:12 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/20 10:57:42 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)	
@@ -20,7 +19,7 @@ void	ft_putstr_fd(char const *s, int fd)
 	i = 0;
 	while(s[i])
 	{
-		ft_putchar_fd(fd, s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
