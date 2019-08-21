@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 22:38:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 13:06:06 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/21 15:42:05 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char  *   ft_strdup(const char *s1)
     char * s1 = (char *)malloc(sizeof(*s1));
     {
     if (s1 == NULL || *s1 == NULL)
-        return (void)(NULL);
+        return (char)(NULL);
     if(s1 != NULL && *s1 != NULL)
         free(*s1);
-    errno = ENOMEM
+    errno == ENOMEM
     s1 = NULL;
     }
 }
