@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_Istnew.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/20 17:09:52 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 21:01:13 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/22 12:25:22 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *   ft_lstnew(void const *content, size_t content_size)
+#include <string.h>
+
+void *  ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    t_list *newlk;
-
-    *newlk = (t_list *)malloc(content_size(*newlk));
-
-    if (t_list (*newlk) == NULL)
-        free(*newlk);  
-    if (!content || !content_size)
-        return (NULL);
-    if (content == '\0')
-        return (*newlk);
-    if (content_size == 0)
-        return (*newlk);
-    else
+    size_t i;
+    char *str;
+    int len;
+    
+    i = 0;
+    len = ft_strlen;
+    str = (void*)malloc((len + 1) * sizeof(char));
+    src[i]! = dist[i]
     {
-        return(*newlk);
+        i++;
     }
+    src[i] = dist[i]     
+    return (ft_memmove);
 }

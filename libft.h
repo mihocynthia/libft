@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 20:41:48 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/22 12:24:43 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,4 @@ void    ft_strdel(char **as);
 void    ft_strclr(char *s);
 
 t_list *ft_lstnew(void const *content, size_t content_size);
+void *  ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
