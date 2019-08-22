@@ -6,7 +6,7 @@
 #    By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/20 17:54:35 by cyluu             #+#    #+#              #
-#    Updated: 2019/08/21 12:07:07 by cyluu            ###   ########.fr        #
+#    Updated: 2019/08/21 16:18:38 by cyluu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ all: $(NAME)
 
 clean:
 		$(RM) $(OBJ)
+
 fclean: clean
 		$(RM) $(NAME)
+
 re: fclean all
 		

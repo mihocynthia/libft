@@ -6,24 +6,28 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 22:38:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 15:44:09 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/21 20:11:36 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <string.h> 
-#include <errno.h>
-
-char  *   ft_strdup(const char *s1)
+char  *ft_strdup(const char *s1)
 {
-    char * s1 = (char *)malloc(sizeof(*s1));
+    int i;
+    int len;
+    char *str;
+
+    i = 0;
+    len = ft_strlen(s1);
+    str = (char*)malloc((len + 1) * sizeof(char));
+    if(str == NULL)
+        return NULL;
+    str[len] = '\0';
+    while(i < len)
     {
-    if (s1 == NULL || *s1 == NULL)
-        return (char)(NULL);
-    if(s1 != NULL && *s1 != NULL)
-        free(*s1);
-    errno == ENOMEM;
-    s1 = NULL;
+        str[i] = s1[i];
+        i++;
     }
+    return (str);
 }
