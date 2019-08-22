@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 16:13:07 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/22 16:41:02 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void *ft_memcpy(unsigned char *dst, unsigned char *src, size_t n)
     {
         src[i] = dst[i];
         i++;
+        free(dst)
     }
     src[i] = dst[i];     
     return (ft_memmove);
