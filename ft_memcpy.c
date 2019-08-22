@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 12:25:22 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/22 12:43:59 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 void *  ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
     size_t i;
-    char *str;
+    char *start;
     int len;
     
     i = 0;
-    len = ft_strlen;
+    Start = dst;
     str = (void*)malloc((len + 1) * sizeof(char));
-    src[i]! = dist[i]
+    src[i] = dist[i];
     {
         i++;
     }
