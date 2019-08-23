@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:14:52 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/22 17:01:03 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/22 17:14:54 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#include <string.h>
-
-void *ft_memcpy(unsigned char *dst, unsigned char *src, size_t n)
+void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 {
-    size_t i;
-    i = 0;
+    char *buff;
+    unsigned char c;
+    int i;
 
-    if (n = 0 || src[i] = dst[i])
-        return (dst[i]);
+    i = 0;
+    buff = malloc(sizeof(*char) * n)
     
-    while (n > i)  
-    {
-        src[i] = dst[i];
-        i++;
-        free(dst)
-    }
-    src[i] = dst[i];     
-    return (ft_memmove);
-}
+}   
