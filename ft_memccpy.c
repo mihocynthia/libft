@@ -6,9 +6,11 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 17:01:03 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 21:41:34 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/22 22:09:29 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 #include <string.h>
 
@@ -26,7 +28,8 @@ void *ft_memccpy(unsigned char *dst, unsigned char *src, int c, size_t n)
         {
             src(buff)[i] = dst(buff)[i]    
             free(dst);
+            return(dst);
         }   
     }
-    return (dst);
+    return (NULL);
 }   
