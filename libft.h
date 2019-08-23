@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:14:59 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/23 11:49:15 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int		ft_strlen(const char *str);
 int		ft_strncpy(char *dest, char *src, unsigned int nl); //test later
 char    *ft_strdup(const char *s1);
 int		ft_strcmp(char *s1, char *s2);
+char	*ft_strcpy(char *dst, const char *src);
+void    *ft_memcpy(void *dst, const void *src, size_t n);
 
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
@@ -49,4 +51,3 @@ void    ft_strclr(char *s);
 
 t_list *ft_lstnew(void const *content, size_t content_size);
 void *ft_memmove(unsigned char *dst, unsigned char *src, size_t len);
-void *ft_memcpy(unsigned char *dst, unsigned char *src, size_t n);

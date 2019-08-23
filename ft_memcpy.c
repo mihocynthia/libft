@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:29:35 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/23 11:46:18 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 
 #include <string.h>
 
-void *ft_memcpy(unsigned char *dst, unsigned char *src, size_t n)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
     size_t i;
-    i = 0;
+    char *dst_c;
+    const char *src_c;
 
-    if (n = 0 || src[i] = dst[i])
-        return (dst[i]);
+    i = 0;
+    dst_c = dst;
+    src_c = src;
+    if (n == 0)
+        return (dst_c);
     
-    while (n > i)  
+    while (n > i && dst_c[i])
     {
-        src[i] = dst[i];
+        dst_c[i] = src_c[i];
         i++;
-        free(dst)
     }
-    src[i] = dst[i];     
-    return (ft_memmove);
+    // dst_c[i] = src_c[i];
+    return (dst_c);
 }
+
+

@@ -6,22 +6,22 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 10:50:32 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 11:59:52 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/23 11:50:05 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int		ft_strcpy(char *s1, char *s2)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 
 	i = 0;
-	while (s2[i])
+	while (src[i])
 	{
-		s1[i] = s2[i];
+		dst[i] = src[i];
 		i += 1;
 	}
-	s1[i] = s2[i];
-	return (s1);
+	dst[i] = src[i];
+	return (dst);
 }

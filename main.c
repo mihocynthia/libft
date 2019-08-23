@@ -4,16 +4,13 @@
 
 #include <string.h>
 
-int		main(void)
-{
-	char	*s1;
-	char	*str;
-	
-	str = "youre ";
-
-	
-	
-	// s1 = str;
-	printf("ft_strdup s1 |%s|\n", str);
-	return (0);
+int main () {
+   const char src[50] = "123456789";
+   char dest[50];
+   ft_strcpy(dest,"Heloooo!!");
+   printf("Before memcpy dest = %s\n", dest);
+   ft_memcpy(dest, src, 1);
+   printf("After memcpy dest = %s\n", dest);
+   
+   return(0);
 }
