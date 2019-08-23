@@ -6,10 +6,11 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 16:15:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 16:15:55 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/22 22:39:31 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void *memchr(const void *s, int c, size_t n)
+
