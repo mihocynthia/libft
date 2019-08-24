@@ -6,13 +6,30 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 16:15:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/23 10:52:45 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/24 14:39:13 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    
+    const char *str;
+    int i;
+
+    i = 0;
+    str = s;
+    if (n == 0)
+        return NULL;
+
+    while(i < n && str[i])
+    {
+        if(str[i] == c)
+        {
+            return (&str[i]);
+        }
+        i++;
+    }
+    return NULL;
+
 }
