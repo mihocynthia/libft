@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 10:46:51 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 16:14:39 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/24 14:44:51 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,3 @@ if (ft_fromlower(c))
 else
 	return (c);
 }
-
-// int     main(int argc, char **argv)
-// {
-//     int i;
-
-//     i =0;
-//     while (argv[1][i])
-//     {
-//             ft_putchar(ft_toupper(argv[1][i]));
-//         i += 1;
-//     }
-//     ft_putchar('\n');
-//     return (0);
-// }

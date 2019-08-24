@@ -6,13 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 15:28:05 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 11:43:31 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/24 15:01:20 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

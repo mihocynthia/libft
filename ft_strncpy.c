@@ -6,25 +6,26 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:07:05 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/20 10:56:03 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/24 15:12:37 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncpy(char *dest, char *src, unsigned int nl)
+char *ft_strncpy(char *dest, char *src, unsigned int nl)
 {
-	char start;
+	char *start;
+	unsigned int i;
 
-	start = *dest;
+	i = 0;
+	start = dest;
+	while (*src != '\0' && i < nl)
 	{
-		while (*src != '\0')
-		{
-			*src = *dest;
-			*src += 1;
-			*dest += 1;
-		}
-		*dest != '\0';
-		return (start);
+		*dest = *src;
+		*src += 1;
+		*dest += 1;
+		i++;
 	}
+	*dest = '\0';
+	return (dest);
 }

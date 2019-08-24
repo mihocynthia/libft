@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 16:15:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/24 14:39:13 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/24 15:10:54 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void *ft_memchr(const void *s, int c, size_t n)
 {
     const char *str;
-    int i;
+    size_t i;
 
     i = 0;
     str = s;
@@ -26,7 +26,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     {
         if(str[i] == c)
         {
-            return (&str[i]);
+            return ((char*)&str[i]);
         }
         i++;
     }
