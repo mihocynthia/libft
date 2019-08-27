@@ -6,22 +6,27 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 15:51:51 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/26 17:47:16 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 12:08:30 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <string.h>
-
-char    *   ft_strrchr(const char *s, int c)
+char    *ft_strrchr(const char *s, int c)
 {
-    //COMPLETE FOR NEX TIME MARTH
-//     while(s(c))
-//     {
-        
-//     }
-    s = NULL;
-    c = NULL;
-    return NULL;
+    int i;
+
+    i = 0;
+    char *s_ret;
+    s_ret = ((char *)s);
+    while(s_ret[i])
+    {
+        i++;
+    }
+    while (i-- && s_ret[i])
+    {
+        if(s_ret[i] == c)
+            return(&s_ret[i]);
+    }
+    return (NULL);
 }

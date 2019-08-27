@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 17:01:03 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 11:20:20 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 12:02:18 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,17 @@
 
 #include "libft.h"
 
-#include <string.h>
-
-void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    unsigned char *src_ret;
-    unsigned char *dst_ret;
-    unsigned char c_ret;
-    int i;
+	unsigned char *src_ret;
+	unsigned char *dst_ret;
+	unsigned char c_ret;
+	int i;
 
-    i = -1;
-    src_ret = (unsigned char *)src;
-    dst_ret = (unsigned char *)dst;
-    c_ret = (unsigned char)c;
+	i = -1;
+	src_ret = (unsigned char *)src;
+	dst_ret = (unsigned char *)dst;
+	c_ret = (unsigned char)c;
 
     while (n--)
     {
@@ -39,6 +37,6 @@ void    *ft_memccpy(void *dst, const void *src, int c, size_t n)
         {
             return((void *)dst_ret);
         }
-    return ((void *)dst_ret);
     }
+    return ((void *)dst_ret);
 }

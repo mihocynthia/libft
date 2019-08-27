@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 01:24:15 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 12:08:18 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dst, const char *src);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
+char    *ft_strrchr(const char *s, int c);
+char    *ft_strchr(const char *s, int c);
 
 void	ft_putnbr(int n);
 void	ft_putchar(char c);

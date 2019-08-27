@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/26 17:27:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 11:51:38 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/27 11:54:42 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/27 12:01:06 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-char *ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int i;
+	int tenths;
+	tenths = 1;
 
-    i = 0;
-    char *s_ret;
-    s_ret = (char*)s;
-
-    while (i++ && s_ret[i])
-    {
-        if(s_ret[i] == c)
-            return(&s_ret[i]);
-    }
-    if(s_ret[i] != '\0')
-        return (&s_ret[i]);
-    return (NULL);
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+	}
+	while (n / tenths >= 10)
+		tenths *= 10;
+	while (tenths >= 1)
+	{
+		ft_putchar_fd(n / tenths + 48, fd);
+		n %= tenths;
+		tenths /= 10;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 11:49:38 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:28:52 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 12:21:42 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,4 @@ int	ft_atoi(const char *str)
 	}
 	return (sig * awsr);
 	write (1, "\n", 1);
-}
-
-int main()
-{
-	int n;
-	n = ft_atoi(" - 124   123   ");
-
-
-	// printf("\n");
-	printf("%d\n", n);
-
 }
