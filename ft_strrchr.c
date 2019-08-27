@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 15:51:51 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:15:02 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/26 17:47:16 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@
 
 char    *   ft_strrchr(const char *s, int c)
 {
-    while(s(c))
-    {
+    //COMPLETE FOR NEX TIME MARTH
+//     while(s(c))
+//     {
         
-    }
+//     }
+    s = NULL;
+    c = NULL;
+    return NULL;
 }

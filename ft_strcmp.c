@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 20:04:01 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 00:16:33 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 int		ft_strcmp(char *s1, char *s2)
 {
 	int	i;
+	unsigned char *simon1;
+	unsigned char *simon2;
 
+	simon1 = (unsigned char *)s1;
+	simon2 = (unsigned char *)s2;
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (simon1[i] && simon1[i] == simon2[i])
 	{
-		if(s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i += 1;
+		i++;
 	}
-	return (0);
+	return (simon1[i] - simon2[i]);
 }
 

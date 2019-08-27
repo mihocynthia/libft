@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 19:56:40 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/19 11:33:08 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/26 17:10:25 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,3 @@ void    ft_putendl(char const *s)
     ft_putchar('\n');
 }
 
-// int main(int ac, char **av)
-// {
-//     ft_putendl(av[1]);
-// }

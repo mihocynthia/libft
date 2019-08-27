@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 17:01:03 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/24 15:12:01 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/26 17:11:52 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,29 @@
 
 void *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    dst = NULL;
-    src = NULL;
-    c = 0;
-    n =0;
-    // char *buff;
-    // unsigned char c;
-    // int i;
+    int i;
+    const char *src_c;
+    char *dst_c;
+    
+    i = 0;
+    src_c = src;
+    dst_c = dst;
+    while (n-- && src_c[i])
+    {
+        dst_c[i] = src_c[i];
+        if (src_c[i] == c)
+            return(dst + (i + 1));
+        i++;
+    }
+    return (NULL);
+}
 
-    // i = 0;
-    // while (n-- && i++)
-    // {
-    //     //buff = malloc(sizeof(* char) * n);
-    //     dst[i] = src[i];
-    //     if (src[i] == c)
-    //     {
-    //         // *str;
-    //         return(dst);
-    //         //src(buff)[i] = dst(buff)[i]    
-    //         //free(dst);
-    //     }   
-    // }
-    return NULL;
-}   
+// int main()
+// {
+//     char src[] = "a";
+//     char dst[50] = "zxcvbfghjk";
+//     // char *tst = ft_memccpy(dst, src, 'b', 7);
+//     char *ans = memccpy(dst, src, 'b', 7);
+//     // printf("tst|%s|\n", tst);
+//     printf("ans|%s|\n", ans);
+// }

@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/22 16:15:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/26 23:37:19 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/27 00:19:47 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/27 01:29:37 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+char        *ft_strcat(char *s1, const char *s2)
 {
-    const char *str;
-    size_t i;
-
+    int i;
     i = 0;
-    str = s;
-    if (n == 0)
-        return NULL;
+    int j;
+    j = 0;
+    unsigned char *s1_return;
+	unsigned char *s2_return;
 
-    while(i < n && str[i])
+	s1_return = (unsigned char *)s1;
+	s2_return = (unsigned char *)s2;
+
+    while (s1_return[i] != '\0')
     {
-        if(str[i] == c)
-        {
-            return ((char*)&str[i]);
-        }
-        i++;
+            i++;
+    } 
+    while (s2_return[j] != '\0')
+    {
+        s1_return[i++] = s2_return[j++];
     }
-    if (c == '\0')
-        return ((char*)&str[i]);
-    return NULL;
+    s1_return[i] = s2_return[j];
+    
+    return ((char *)s1_return);
+}    
 
-}
