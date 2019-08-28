@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 14:25:49 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/26 23:27:18 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 19:59:13 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 {
 
     size_t i;
-    unsigned char *simon;
-    unsigned char *simon2;
+    unsigned char *sn;
+    unsigned char *sn2;
 
     if (len == 0 || dst == src)
         return (dst);
-    simon = (unsigned char *)dst;
-    simon2 = (unsigned char *)src;
+    sn = (unsigned char *)dst;
+    sn2 = (unsigned char *)src;
     i = 0;
 
-    if (simon > simon2)
+    if (sn > sn2)
     {
         while (len-- > 0)
         {
-            simon[len] = ((unsigned char *)src)[len];
+            sn[len] = ((unsigned char *)src)[len];
         }
     }
     else
     {
         while (i < len)
         {
-            simon[i] = ((unsigned char *)src)[i];
+            sn[i] = ((unsigned char *)src)[i];
             i++;
         }
     }
