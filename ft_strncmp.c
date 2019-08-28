@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 22:32:37 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 22:48:17 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 23:00:16 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 
 int     ft_strncmp(const char *s1, const char *s2, size_t n)
-
+{
 int	i;
 	unsigned char *sn1;
 	unsigned char *sn2;
@@ -28,3 +28,4 @@ int	i;
 	while (sn1[i] && sn1[i] == sn2[i] && --len)
 		i++;
 	return (sn1[i] - sn2[i]);
+}
