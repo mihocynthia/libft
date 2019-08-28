@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 22:48:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/27 22:32:37 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/27 22:48:17 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+/*function is similar, except it only compares the first (at most) n bytes 
+* of s1 and s2.
+*/
+
+int     ft_strncmp(const char *s1, const char *s2, size_t n)
+
+int	i;
 	unsigned char *sn1;
 	unsigned char *sn2;
 
 	sn1 = (unsigned char *)s1;
 	sn2 = (unsigned char *)s2;
 	i = 0;
-	while (sn1[i] && sn1[i] == sn2[i])
-	{
+	while (sn1[i] && sn1[i] == sn2[i] && --len)
 		i++;
-	}
-	return (sn1[i] - s2[i]);
-}
-
+	return (sn1[i] - sn2[i]);
