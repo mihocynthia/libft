@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 14:27:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 16:43:47 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/27 22:26:12 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,20 @@
 int		ft_strncmp(char *s1, char *s2, size_t len)
 {
 	int	i;
-	unsigned char *simon1;
-	unsigned char *simon2;
+	unsigned char *sn1;
+	unsigned char *sn2;
 
-	simon1 = (unsigned char *)s1;
-	simon2 = (unsigned char *)s2;
+	sn1 = (unsigned char *)s1;
+	sn2 = (unsigned char *)s2;
 	i = 0;
-	while (simon1[i] && simon1[i] == simon2[i] && --len)
+	while (sn1[i] && sn1[i] == sn2[i] && --len)
 		i++;
-	return (simon1[i] - simon2[i]);
+	return (sn1[i] - sn2[i]);
 }
-#include <stdio.h>
+//#include <stdio.h>
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
-{
+//{
 /* 
     int i;
     int j;
@@ -58,6 +58,8 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
         return haystack;
     while (*haystack != '\0' && len--)
     {
+        if (len < needle_len)
+            break;
         //printf("[%zu] comparing: %s | %s | %d\n", len, haystack, needle, ft_strncmp(haystack, needle, needle_len));
         if (ft_strncmp(haystack, needle, needle_len) == 0)
             return (haystack);
@@ -65,40 +67,11 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
             haystack++;
     }
     return (NULL);
-/*
-
-    // char * =  strstr(big_ret[j], small_ret[i])
-    while (little_ret[i] != '\0')
-    {
-        i++;
-    }
-    while (little_ret[i]  len)
-    {
-        little_ret[i++]
-    }
-    
-    if (little_ret > big_ret)
-    {
-        while (len-- > 0)
-        {
-            little_ret[len] = ((unsigned char *)big[j]);
-            return NULL;
-        }
-    else
-        {
-        while (big_ret[j)
-        {
-            j++    
-        }
-        return ((char *)little);
-        }
-    }
- */
 }
 
-#include <string.h>
-int  main(void)
-{
+//#include <string.h>
+//int  main(void)
+//{
     // const char *big = "Foo Bar Baz";
     // const char *small = "Bar";
     // printf("%s\n", ft_strnstr(big, small, 10));
@@ -110,17 +83,17 @@ int  main(void)
     // printf("%s\n", ft_strnstr("cccabc", "abc", 10));
 
         
-    char	*s1 = "MZIRIBMZIRIBMZE123";
-    char	*s2 = "MZIRIBMZE";
-    size_t	max = strlen(s2);
+   // char	*s1 = "MZIRIBMZIRIBMZE123";
+    //char	*s2 = "MZIRIBMZE";
+    //size_t	max = strlen(s2);
 
-    char	*i1 = strnstr(s1, s2, max);
-    char	*i2 = ft_strnstr(s1, s2, max);
-    printf("%p %p\n", i1, i2);
+    //char	*i1 = strnstr(s1, s2, max);
+    //char	*i2 = ft_strnstr(s1, s2, max);
+    //printf("%p %p\n", i1, i2);
 
 
     //printf("%d\n", ft_strncmp("Bar Baz", "Bar", 3));
 
  
-    return (0);
-}
+    //return (0);
+//}
