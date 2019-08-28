@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 22:32:37 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 23:00:16 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 00:08:16 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
 int	i;
 	unsigned char *sn1;
 	unsigned char *sn2;
+    unsigned int len;
+    len = (unsigned int)ft_strlen(s2);
 
 	sn1 = (unsigned char *)s1;
 	sn2 = (unsigned char *)s2;
