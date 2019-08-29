@@ -6,23 +6,23 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 18:08:22 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/21 20:42:47 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 15:22:53 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-    int i;
+	int		i;
 
-    i = 0;
-    if (s == NULL)
-        return (void)(NULL);
-    while (s[i])
-    {
-        s[i] = '\0';
-        i++;
-    }
-    s[i] = '\0';
+	i = 0;
+	if (s == NULL)
+		return (void)(NULL);
+	while (s[i])
+	{
+		s[i] = '\0';
+		i++;
+	}
+	s[i] = '\0';
 }

@@ -6,18 +6,18 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 16:14:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/20 10:57:42 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 14:46:48 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)	
+void	ft_putstr_fd(char const *s, int fd)
 {
-	int i;
+	int		i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;
