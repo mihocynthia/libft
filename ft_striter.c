@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 21:19:59 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 02:50:02 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 03:26:11 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 void    ft_striter(char *s, void (*f)(char *))
 {
-    int i;
-
     if (s && f == NULL)
     return ;
     while (s != NULL)
