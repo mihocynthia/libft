@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:27:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 12:37:04 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 13:14:37 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int len;
 char *word;
 
 len = ft_strlen(s1) + ft_strlen(s2);
-
-char * word = (char)malloc(sizeof(char) * len + 1);
+word = (char)malloc(sizeof(char) * len + 1);
 while(*s1)
     s1++;
 while (*s2)

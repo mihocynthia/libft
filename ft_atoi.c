@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 11:49:38 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 19:10:08 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 12:46:02 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	{
 		while (*str == ' ' || *str == '\f' || *str == '\r' ||
 				*str == '\n' || *str == '\t' || *str == '\v')
-				str++;
+			str++;
 		if (*str == '+' && str++)
 			sig = 1;
 		else if (*str == '-' && str++)

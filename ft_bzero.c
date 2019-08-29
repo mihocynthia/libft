@@ -6,21 +6,22 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 15:57:33 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/17 16:06:37 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 13:09:26 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <strings.h>
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t i;
-    char    *ch;
+	size_t	i;
+	char	*ch;
 
-    ch = s;
-    i = 0;
-    while (i < n)
-    {
-        ch[i++] = '\0';
-    } 
+	ch = s;
+	i = 0;
+	while (i < n)
+	{
+		ch[i++] = '\0';
+	}
 }
