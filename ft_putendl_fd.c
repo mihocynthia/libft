@@ -6,14 +6,14 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:18:22 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 00:46:28 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 14:34:07 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
-    ft_putstr_fd(s, fd);
-    ft_putchar_fd('\n', fd);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
