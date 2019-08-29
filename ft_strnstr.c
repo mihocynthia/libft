@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 14:27:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 12:36:42 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 18:24:36 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,23 @@
 
 #include "libft.h"
 
-int		ft_strncmp(char *s1, char *s2, size_t len)
-{
-	int	i;
-	unsigned char *sn1;
-	unsigned char *sn2;
+// int		ft_strncmp(const char *s1, char *s2, size_t len)
+// {
+// 	int	i;
+// 	unsigned char *sn1;
+// 	unsigned char *sn2;
 
-	sn1 = (unsigned char *)s1;
-	sn2 = (unsigned char *)s2;
-	i = 0;
-	while (sn1[i] && sn1[i] == sn2[i] && --len)
-		i++;
-	return (sn1[i] - sn2[i]);
-}
-//#include <stdio.h>
+// 	sn1 = (unsigned char *)s1;
+// 	sn2 = (unsigned char *)s2;
+// 	i = 0;
+// 	while (sn1[i] && sn1[i] == sn2[i] && --len)
+// 		i++;
+// 	return (sn1[i] - sn2[i]);
+// }
+
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
-//{
-/* 
-    int i;
-    int j;
-    i = 0;
-    j = 0;
-    unsigned char *little_ret;
-    unsigned char *big_ret;
-
-    little_ret = (unsigned char *)little;
-    big_ret = (unsigned char *)big;
-*/
+{
     int needle_len; 
     char *haystack;
     char *needle;
@@ -61,7 +50,6 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     {
         if (len < needle_len)
             break;
-        //printf("[%zu] comparing: %s | %s | %d\n", len, haystack, needle, ft_strncmp(haystack, needle, needle_len));
         if (ft_strncmp(haystack, needle, needle_len) == 0)
             return (haystack);
         else
@@ -69,32 +57,3 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     }
     return (NULL);
 }
-
-//#include <string.h>
-//int  main(void)
-//{
-    // const char *big = "Foo Bar Baz";
-    // const char *small = "Bar";
-    // printf("%s\n", ft_strnstr(big, small, 10));
-    // printf("%s\n", ft_strnstr(big, "abc", 10));
-    // printf("%s\n", ft_strnstr(big, "", 10));
-    // printf("%s\n", ft_strnstr("abc", "abc", 10));
-    // printf("%s\n", ft_strnstr("abc", "abd", 2));
-    // printf("%s\n", ft_strnstr("cccadc", "abc", 5));
-    // printf("%s\n", ft_strnstr("cccabc", "abc", 10));
-
-        
-   // char	*s1 = "MZIRIBMZIRIBMZE123";
-    //char	*s2 = "MZIRIBMZE";
-    //size_t	max = strlen(s2);
-
-    //char	*i1 = strnstr(s1, s2, max);
-    //char	*i2 = ft_strnstr(s1, s2, max);
-    //printf("%p %p\n", i1, i2);
-
-
-    //printf("%d\n", ft_strncmp("Bar Baz", "Bar", 3));
-
- 
-    //return (0);
-//}

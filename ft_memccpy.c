@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 17:01:03 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 21:52:38 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 19:27:05 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,15 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
     }
     return (NULL);
 }
-/* 
-int main(void)
-{
-char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
-char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
-char	*src = "string with\200inside !";
-memccpy(buff1, src, '\200', 21);
-printf("%s\n", buff1);
-ft_memccpy(buff2, src, '\200', 21);
-printf("%s\n", buff2);
-return (0);
-}
-*/
+
+// int main(void)
+// {
+// char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
+// char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
+// char	*src = "string 1withinside !";
+// memccpy(buff1, src, '1', 21);
+// printf("ans|%s|\n", buff1);
+// ft_memccpy(buff2, src, '1', 21);
+// printf("tst|%s|\n", buff2);
+// return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 22:32:37 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 00:08:16 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 18:30:22 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	i;
 	sn1 = (unsigned char *)s1;
 	sn2 = (unsigned char *)s2;
 	i = 0;
-	while (sn1[i] && sn1[i] == sn2[i] && --len)
+	while (sn1[i] && sn1[i] == sn2[i] && --len && i < n)
 		i++;
 	return (sn1[i] - sn2[i]);
 }

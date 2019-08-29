@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 23:12:40 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/27 23:57:22 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 18:13:06 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 * dst is not a proper string).
  */
 
-size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
     int i;
+    int   j;
+
+    j = 0;
     i = -1;
     unsigned char *src_ret;
     unsigned char *dst_ret;
@@ -39,7 +42,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
     {
         dst_ret[i++] = src_ret[j++];
     }
-    dst_len[i] = src_ret[j];   
+    dst_len = src_ret[j];   
     //return((char)&dst[i])
     return (NULL);
 }

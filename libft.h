@@ -6,13 +6,14 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 00:39:56 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/28 18:36:05 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 
+#include <string.h>
 #include <stdio.h>
 
 typedef struct      s_list
@@ -41,7 +42,13 @@ void    *ft_memcpy(void *dst, const void *src, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strchr(const char *s, int c);
+char    *ft_strnstr(const char *big, const char *little, size_t len);
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
+char    *ft_strstr(const char *haystack, const char *needle);
 
+int     ft_strnequ(char const *s1, char const *s2, size_t n);
+int     ft_strequ(char const *s1, char const *s2);
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
@@ -57,6 +64,3 @@ t_list *ft_lstnew(void const *content, size_t content_size);
 void *ft_memmove(void *dst, const void *src, size_t len);
 
 
-char    *ft_strnstr(const char *big, const char *little, size_t len);
-int     ft_strncmp(const char *s1, const char *s2, size_t n);
-size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
