@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-
+//7 failed 3 okays 
 char *ft_strchr(const char *s, int c)
 {
     int i;

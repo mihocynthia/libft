@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 00:40:43 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/28 17:02:32 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/28 17:08:11 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* Lexicographical comparison between s1 and s2. If the 2 strings are 
+* identical the function returns 1, or 0 otherwise.
+ */
 
-int		ft_strcmp(char *s1, char *s2)
+int     ft_strequ(char const *s1, char const *s2)
 {
-	int	i;
-	unsigned char *sn1;
-	unsigned char *sn2;
-
-	sn1 = (unsigned char *)s1;
-	sn2 = (unsigned char *)s2;
-	i = 0;
-	while (sn1[i] && sn1[i] == sn2[i])
-	{
-		i++;
-	}
-	return (sn1[i] - s2[i]);
+    int i;
+    i = 0;
+    ft_strcmp(s1, s2)
+    while (s1[i])
+    {
+        if (s1[i] = s2[i])
+        {
+            return (1);
+        }
+        return (0); 
 }
-
