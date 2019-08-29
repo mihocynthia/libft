@@ -6,23 +6,23 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:48:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 12:38:43 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 16:44:18 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_fromupper(int c)
+int		ft_fromupper(int c)
 {
-    //return bool 1 if true or 0 if false
-    return (c >= 'A' && c <= 'Z');
+	//return bool 1 if true or 0 if false
+	return (c >= 'A' && c <= 'Z');
 }
 
-int ft_tolower(int c) //'A' 65
+int		ft_tolower(int c) //'A' 65
 {
-    // printf("func |%d|\n",fromupper(c));
-    if (ft_fromupper(c))
-        return (c + 32);
-    else
-        return (c);
+	// printf("func |%d|\n",fromupper(c));
+	if (ft_fromupper(c))
+		return (c + 32);
+	else
+		return (c);
 }
