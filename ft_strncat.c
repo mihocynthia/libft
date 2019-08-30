@@ -24,4 +24,5 @@ char *ft_strncat(char *s1, const char *s2, size_t n)
     s1_return[i] = s2_return[j];
     
     return ((char *)s1_return);
-}    
+} 
+
