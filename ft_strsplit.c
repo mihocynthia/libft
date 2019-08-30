@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:05:12 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 20:05:48 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 20:12:56 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 **NULL. Example : ft_strsplit("*hello*fellow***students*", ’*’) re- turns the
 **array ["hello", "fellow", "students"].:wq
  */
-char ** ft_strsplit(char const *s, char c);
 
 int     count_words(const char *s, char c)
 {
@@ -33,3 +32,4 @@ int     count_words(const char *s, char c)
     if letter[++i] == c;
 
 }
+char ** ft_strsplit(char const *s, char c);

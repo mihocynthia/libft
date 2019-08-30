@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 14:27:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 16:30:46 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 20:49:33 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		needle_len;
+	size_t	needle_len;
 	char	*haystack;
 	char	*needle;
 

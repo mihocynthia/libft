@@ -6,13 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:48:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 16:44:18 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/29 20:56:44 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_fromupper(int c)
+static int		ft_fromupper(int c)
 {
 	//return bool 1 if true or 0 if false
 	return (c >= 'A' && c <= 'Z');
