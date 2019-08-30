@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 02:59:37 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/30 03:51:28 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void *ft_memmove(void *dst, const void *src, size_t len);
 void    ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char    *ft_strjoin(char const *s1, char const *s2);
+void    *ft_memalloc(size_t size);
 
 
 

@@ -6,7 +6,7 @@
 #    By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/20 17:54:35 by cyluu             #+#    #+#              #
-#    Updated: 2019/08/29 21:06:31 by cyluu            ###   ########.fr        #
+#    Updated: 2019/08/30 03:55:46 by cyluu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c f
 		ft_putendl_fd.c ft_putendl.c ft_putnbr.c ft_putstr_fd.c ft_putstr.c ft_strclr.c ft_strcmp.c ft_strdel.c\
 		ft_strdup.c ft_strlen.c ft_strncpy.c ft_tolower.c ft_toupper.c ft_strcpy.c ft_strcat.c ft_strncat.c ft_strchr.c\
 		ft_strrchr.c ft_putnbr_fd.c ft_strnstr.c ft_strncmp.c ft_strlcat.c ft_striter.c ft_strjoin.c\
-		ft_strstr.c
+		ft_strstr.c ft_memalloc.c
 HDR = ./includes/
 
 CFLAGS = -Wall -Werror -Wextra
