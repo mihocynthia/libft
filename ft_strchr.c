@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 17:27:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 21:48:57 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/30 00:01:13 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 
 	s_ret = (char*)s;
 	i = 0;
-	if(c == '\0')
+	if (c == '\0')
 		return (&s_ret[i + ft_strlen(s_ret)]);
 	while (s_ret[i])
 	{

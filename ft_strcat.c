@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 00:19:47 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 14:51:32 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/30 00:06:26 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strcat(char *s1, const char *s2)
 	while (s1_return[i] != '\0')
 	{
 		i++;
-	} 
+	}
 	while (s2_return[j] != '\0')
 	{
 		s1_return[i++] = s2_return[j++];
