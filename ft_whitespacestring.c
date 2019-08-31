@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_whitespacestring.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 21:19:50 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 21:23:09 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+void    ft_whitespacestring(char c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    return ((c == ' ') || (c == '\t') || (c == '\n'));
 }

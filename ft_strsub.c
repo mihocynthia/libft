@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 21:01:09 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 21:16:52 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+char    *ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
+    char    *strr;
+    int     line;
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    if (!s)
+        return (NULL);
+    strr = ft_strnew(len);
+    if (!strr)
+        return (NULL);
+    while (line < len)
+        strr[line++] = s[start++];
+    return (strr);
 }

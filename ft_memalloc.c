@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 03:13:18 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 04:37:28 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/30 19:52:42 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@
 
 #include "libft.h"
 
-void    *ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
-    char    *memword;
+	void	*memword;
 
-    memword = (char *)malloc((sizeof(char)* size));
-    if (memword == NULL)
-        return (NULL);
-    while (memword++, size--)
-    {
-        memword = 0;
-    }
-    return (memword);
+	memword = malloc(size);
+	if (memword == NULL)
+		return (NULL);
+	else
+		ft_bzero(memword, size);
+	return (memword);
 }

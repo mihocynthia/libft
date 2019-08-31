@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 20:40:20 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 20:46:25 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
+    char    *memnew;
+    int     i;
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    if (s == NULL || f == NULL)
+        return (NULL);
+    memnew = ft_strnew(ft_strlen(s));
+    if (memnew == NULL)
+        return (NULL);
+    ft_strcpy(memnew, s);
+    i = 0;
+    while (*(memnew + i++))
+        *(memnew + i) = f(i, *(memnew + i));
+        //entire of string listed of 
+    return(memnew);
 }

@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 21:17:59 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 21:36:22 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+char    *ft_strtrim(char const *s)
 {
-	unsigned int	i;
+    int     start;
+    int     end;
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    if (!s)
+        return (NULL);
+    start = 0;
+    end = ft_strlen(s);
+    while (ft_whitespacestring(s[start]))
+        start++;
+    while (ft_whitespacestring(s[end]))
+        end--;
+    if (start > end)
+        start = end;    
+    return(ft_strsub(s, start, end - start)); 
 }

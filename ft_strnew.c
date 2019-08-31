@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 19:36:45 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 20:23:26 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strnew(size_t size)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return((char *)ft_memalloc(sizeof(char) * size + 1));
 }

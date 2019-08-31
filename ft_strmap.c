@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 19:34:21 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 20:42:26 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strcmp(char *s1, char *s2)
+// dereference string
+char * ft_strmap(char const *s, char (*f)(char))
 {
-	unsigned int	i;
+    char    *cookie;
+    int     i;
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    if (s == NULL || f == NULL)
+        return (NULL);
+    cookie = ft_strnew(ft_strlen(s));
+    if (cookie == NULL)
+        return (NULL);
+    ft_strcpy(cookie, s);
+    i = 0;
+    while (*(cookie + i++))
+        *(cookie + i) = f(*(cookie + i));
+        //entire of string listed of 
+    return(cookie);
 }

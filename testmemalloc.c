@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 22:50:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 20:59:18 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 03:13:18 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 19:41:59 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**Allocates (with malloc(3)) and returns a “fresh” memory area. The memory
+**allocated is initialized to 0. If the alloca- tion fails, the function
+**returns NULL.
+*/
+
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+void	*ft_memalloc(size_t size)
 {
-	unsigned int	i;
+	char	*memword;
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	memword = (char *)malloc((sizeof(char) * size));
+	if (memword == NULL)
+		return (NULL);
+	while (memword++)
+	{
+		memword = 0;
+		size--;
+	}
+	return (memword);
 }
