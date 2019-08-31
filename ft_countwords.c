@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 20:48:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 22:49:00 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 22:47:45 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_fromupper(int c)
+int     ft_countwords(const char *s, char c)
 {
-	return (c >= 'A' && c <= 'Z');
-}
+    size_t  count;
+    int     num;
 
-int		ft_tolower(int c)
-{
-	if (ft_fromupper(c))
-		return (c + 32);
-	else
-		return (c);
+    count = 0;
+    num = 0;
+    while (*s)
+    {
+        if (!num && *s != c)
+            count++;
+        num = (*s == c) ? 0 : 1;
+        s++;
+    }
+    return (count);
 }

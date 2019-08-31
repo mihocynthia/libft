@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 20:48:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 22:49:00 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/30 22:29:10 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/30 22:49:49 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_fromupper(int c)
+int     ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	return (c >= 'A' && c <= 'Z');
-}
+    unsigned char   *s1_ret;
+    unsigned char   *s2_ret;
+    int             size;
 
-int		ft_tolower(int c)
-{
-	if (ft_fromupper(c))
-		return (c + 32);
-	else
-		return (c);
+    size = 0;
+    s1_ret = (unsigned char *)s1;
+    s2_ret = (unsigned char *)s2;
+    while (*s1_ret == *s2_ret && size < n)
+    {
+        s1_ret++;
+        s2_ret++;
+        size++;
+    }
+    if (size == n)
+        return (0);
+    return (*s2_ret - *s1_ret);
 }
