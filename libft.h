@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 22:47:55 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/31 03:49:55 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,23 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
-char * ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strnew(size_t size);
+char	**ft_strsplit(char const *s, char c);
+void	ft_whitespacestring(char c);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char    *ft_strtrim(char const *s);
+void	*ft_memalloc(size_t size);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_memdel(void **ap);
+int     ft_countwords(const char *s, char c);
+
+
+
+
+
 
 
 

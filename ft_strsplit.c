@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:05:12 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 03:34:59 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/31 03:45:47 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 #include "libft.h"
 
-char ** ft_strsplit(char const *s, char c)
+char    **ft_strsplit(char const *s, char c)
 {
     char    **take;
     int     r1;
