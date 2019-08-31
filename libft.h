@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 03:49:55 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/31 04:05:02 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include <string.h>
 #include <stdio.h>
 
-typedef struct      s_list
+typedef struct		s_list
 {
-	void            *content;
-	size_t          content_size;
-	struct s_list   *next;
-}                   t_list;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -75,16 +75,8 @@ char	*ft_strnew(size_t size);
 char	**ft_strsplit(char const *s, char c);
 void	ft_whitespacestring(char c);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
-char    *ft_strtrim(char const *s);
+char	*ft_strtrim(char const *s);
 void	*ft_memalloc(size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_memdel(void **ap);
-int     ft_countwords(const char *s, char c);
-
-
-
-
-
-
-
-
+int		ft_countwords(const char *s, char c);
