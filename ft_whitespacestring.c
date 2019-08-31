@@ -6,13 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 21:19:50 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 22:50:20 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/31 03:41:37 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_whitespacestring(char c)
+void	ft_whitespacestring(char c)
 {
-    return ((c == ' ') || (c == '\t') || (c == '\n'));
+	return ((c == ' ') || (c == '\t') || (c == '\n'));
 }
