@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:48:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 22:17:14 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/08/30 18:23:27 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 static int		ft_fromupper(int c)
 {
-	//return bool 1 if true or 0 if false
 	return (c >= 'A' && c <= 'Z');
 }
 
-int		ft_tolower(int c) //'A' 65
+int		ft_tolower(int c)
 {
-	// printf("func |%d|\n",fromupper(c));
 	if (ft_fromupper(c))
 		return (c + 32);
 	else
