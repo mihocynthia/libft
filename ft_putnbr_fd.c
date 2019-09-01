@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 11:54:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/28 00:43:39 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 16:40:55 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int tenths;
-	tenths = 1;
+	int		tenths;
 
+	tenths = 1;
 	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
