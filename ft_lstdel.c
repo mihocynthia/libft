@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:33:49 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 16:23:30 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 16:33:46 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countwords(const char *s, char c)
+void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t		count;
-	int			num;
-
-	count = 0;
-	num = 0;
-	while (*s)
-	{
-		if (!num && *s != c)
-			count++;
-		num = (*s == c) ? 0 : 1;
-		s++;
-	}
-	return (count);
+    if ((*alst)->next)
+        ft_lstdel(&(*alst)->next, del);
+    ft_lstdelone(&(*alst), del);
 }

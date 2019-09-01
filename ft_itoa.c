@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:33:49 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 15:18:00 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 15:54:09 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countwords(const char *s, char c)
+char * ft_itoa(int n)
 {
-	size_t		count;
-	int			num;
+	int		sig;
+	int		awsr;
+	char    *str;
+    int     c;
 
-	count = 0;
-	num = 0;
-	while (*s)
-	{
-		if (!num && *s != c)
-			count++;
-		num = (*s == c) ? 0 : 1;
-		s++;
-	}
-	return (count);
+    awsr = n;
+	sig = (n < 0) ? ft_numbercount(n) + 1 : ft_numbercount(n);
+	str = ft_strnew(sig)
+    if (!str)
+        return (NULL);
+    while (sig--)
+    {
+        c = awsr % 10;
+        str[sig] = c < 0 ? -c + '0' : c + '0';
+        awsr /= 10;
+    }
+    if (n < 0)
+        str[0] = '-';
+    return (str);
 }

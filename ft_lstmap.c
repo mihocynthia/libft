@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:33:49 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 16:37:15 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 16:40:58 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countwords(const char *s, char c)
+t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
 {
-	size_t		count;
-	int			num;
+    t_list  *fresh;
 
-	count = 0;
-	num = 0;
-	while (*s)
-	{
-		if (!num && *s != c)
-			count++;
-		num = (*s == c) ? 0 : 1;
-		s++;
-	}
-	return (count);
+    if (lst)
+    {
+        fresh = f(lst);
+        fresh->next = ft_lstmap(lst->next, f);
+        return (fresh);
+    }
+    return (NULL);
 }

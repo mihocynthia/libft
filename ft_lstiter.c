@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:33:49 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 16:33:55 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 16:36:55 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countwords(const char *s, char c)
+void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	size_t		count;
-	int			num;
-
-	count = 0;
-	num = 0;
-	while (*s)
-	{
-		if (!num && *s != c)
-			count++;
-		num = (*s == c) ? 0 : 1;
-		s++;
-	}
-	return (count);
+    while(lst != NULL)
+    {
+        f(lst);
+        lst = lst->next;
+    }
 }

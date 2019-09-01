@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   numbercount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 21:41:15 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:33:49 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 15:29:32 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 15:34:59 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-int		ft_countwords(const char *s, char c)
+int		ft_numbercount(int c)
 {
-	size_t		count;
-	int			num;
+	int i;
 
-	count = 0;
-	num = 0;
-	while (*s)
-	{
-		if (!num && *s != c)
-			count++;
-		num = (*s == c) ? 0 : 1;
-		s++;
-	}
-	return (count);
+	i = 1;
+	while (i /= 10)
+        i++;
+	return (i);
 }

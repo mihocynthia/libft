@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_Istnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/20 17:09:52 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/22 17:29:33 by cyluu            ###   ########.fr       */
+/*   Created: 2019/08/31 16:12:30 by cyluu             #+#    #+#             */
+/*   Updated: 2019/08/31 16:22:33 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *   ft_lstnew(void const *content, size_t content_size)
+void ft_lstadd(t_list **alst, t_list *new)
 {
-    t_list *newlk;
-
-    *newlk = (t_list *)malloc(content_size(*newlk));
-
-    if (t_list (*newlk) == NULL)
-        free(*newlk);  
-    if (!content || !content_size)
-        return (NULL);
-    if (content == '\0')
-        return (*newlk);
-    if (content_size == 0)
-        return (*newlk);
-    else
+    if (new != NULL && alst != NULL)
     {
-        return(*newlk);
+        new->next = alst;
+        *alst = new;
     }
 }
