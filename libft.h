@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 21:37:39 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 16:24:33 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,14 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void const *content, size_t content_size);
-void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void ft_lstadd(t_list **alst, t_list *new);
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void	ft_whitespacestring(char c);
 int		ft_countwords(const char *s, char c);
 int		ft_numbercount(int c);
-void    ft_otherwhitespacingstring(char c);
-void        ft_removestringspacing(char c);
+void	ft_otherwhitespacingstring(char c);
+void	ft_removestringspacing(char c);
