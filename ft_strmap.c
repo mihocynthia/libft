@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 19:34:21 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 19:14:14 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 12:02:03 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*map;
 	int		i;
 
+	map = (char *)malloc(sizeof(char) + 1)
 	if (s == NULL || f == NULL)
 		return (NULL);
 	map = ft_strnew(ft_strlen(s));
