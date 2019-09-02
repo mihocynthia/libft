@@ -6,15 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 18:52:48 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 19:59:41 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 
-//#include <string.h>
-//#include <stdio.h>
 
 typedef struct		s_list
 {
