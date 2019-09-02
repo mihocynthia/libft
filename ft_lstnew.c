@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:09:52 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 19:32:03 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 20:30:43 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		newlk->content = NULL;
 		newlk->content_size = 0;
-		return newlk;
+		return (newlk);
 	}
 	else
 	{

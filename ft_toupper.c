@@ -6,7 +6,7 @@
 /*   By: cyluu <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 13:58:01 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 13:58:37 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 20:31:35 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		ft_fromlower(int c)
 	return (c >= 'a' && c <= 'z');
 }
 
-int		ft_toupper(int c)
+int				ft_toupper(int c)
 {
 	if (ft_fromlower(c))
 		return (c - 32);
