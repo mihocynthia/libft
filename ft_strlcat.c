@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 23:12:40 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 16:54:44 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 08:24:46 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,23 @@
 **dst is not a proper string).
 */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	int				i;
-	int				j;
-	unsigned char	*src_ret;
-	unsigned char	*dst_ret;
-	size_t			dst_len;
+	size_t	i;
+	size_t	d;
 
-	j = 0;
 	i = 0;
-	src_ret = (unsigned char *)src;
-	dst_ret = (unsigned char *)dst;
-	dst_len = ft_strlen(dst);
-	
-	if (dstsize == 0 || dst_len > dstsize + 1)
-		return (0);
-	while (src_ret[i] != '\0')
+	d = dsize - ft_strlen(dst);
+	if ((*dst != '\0') && (*src != '\0'))
 	{
-		i++;
+		while ((*dst != '\0'))
+			dst++;
+		while (*src != '\0' && i < d)
+		{
+			i++;
+			*dst++ = *src++;
+		}
+		*dst = '\0';
 	}
-	while (dst_ret[j] != '\0') // handle logic for dstsize
-	{
-		dst_ret[i++] = src_ret[j++];
-	}
-	dst_len = src_ret[j]; // wrong
-	
-	return (dst_len);
+	return (i + d);
 }
