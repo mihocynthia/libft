@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 11:45:42 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 14:24:17 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 19:37:54 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	src_c = (const char *)src;
 	if (n == 0)
 		return (dst_c);
-	while (n > i && dst_c[i])
+	while (n > i)
 	{
 		dst_c[i] = src_c[i];
 		i++;

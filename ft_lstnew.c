@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:09:52 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 17:59:12 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 19:32:03 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *newlk;
 
-	newlk = (t_list *)malloc(sizeof(*newlk));
+	newlk = (t_list*)malloc(sizeof(t_list));
 	if (newlk == NULL)
 		return (NULL);
-	if (!content || !content_size)
+	newlk->next = NULL;
+	if (!content)
 	{
 		newlk->content = NULL;
 		newlk->content_size = 0;
+		return newlk;
 	}
 	else
 	{
@@ -35,6 +37,5 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		ft_memcpy(newlk->content, content, content_size);
 		newlk->content_size = content_size;
 	}
-	newlk->next = NULL;
 	return (newlk);
 }

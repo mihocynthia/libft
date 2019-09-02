@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 21:01:09 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 03:33:39 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 18:40:03 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*strr;
-	int		line;
+	size_t	line;
 
+	line = 0;
 	if (!s)
 		return (NULL);
 	strr = ft_strnew(len);

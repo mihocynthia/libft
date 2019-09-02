@@ -6,7 +6,7 @@
 #    By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/20 17:54:35 by cyluu             #+#    #+#              #
-#    Updated: 2019/09/01 16:07:13 by cyluu            ###   ########.fr        #
+#    Updated: 2019/09/01 18:27:26 by cyluu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c\
 		ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 		ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
 		ft_lstiter.c ft_lstmap.c ft_whitespacestring.c ft_otherwhitespacingstring.c\
-		ft_countwords.c ft_numbercount.c ft_removestringspacing.c\
+		ft_countwords.c ft_numbercount.c ft_removestringextraspacing.c\
 
 HDR = ./includes/
 

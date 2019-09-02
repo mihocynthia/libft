@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 17:36:18 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 18:52:48 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
-void	ft_whitespacestring(char c);
+char	*ft_strtrim(char const *s);
+int		ft_whitespacestring(char c);
 int		ft_countwords(const char *s, char c);
 int		ft_numbercount(int c);
-void	ft_otherwhitespacingstring(char c);
-void	ft_removestringspacing(char c);
+int		ft_otherwhitespacingstring(char c);
+char	*ft_removestringextraspacing(char c);

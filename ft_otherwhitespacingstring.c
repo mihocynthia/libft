@@ -6,13 +6,13 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 16:46:35 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 16:26:23 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 18:46:38 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
-void	ft_otherwhitespacingstring(char c)
+int		ft_otherwhitespacingstring(char c)
 {
 	return ((c == '\v') || (c == '\f') || (c == '\r'));
 }

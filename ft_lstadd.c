@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 16:12:30 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 16:18:24 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 18:43:02 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (new != NULL && alst != NULL)
 	{
-		new->next = alst;
+		new->next = *alst;
 		*alst = new;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:27:39 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/31 03:11:10 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/01 19:52:10 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-
 	int		len;
 	char	*word;
 	int		i1;
@@ -35,9 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[i2] != '\0')
 	{
-		word[i1] = s2[i2];
-		i1++;
-		i2++;
+		word[i1++] = s2[i2++];
 	}
 	word[i1] = '\0';
 	return (word);
