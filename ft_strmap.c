@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 19:34:21 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 16:19:06 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 03:03:35 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,20 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*map;
 	int		i;
 
-	if (s == NULL || f == NULL)
+	i = 0;
+	if (s == NULL && f == NULL)
 		return (NULL);
-	map = ft_strnew(ft_strlen(s));
+	while (s[i] != '\0')
+		i++;
+	map = (char *)malloc(sizeof(char) * (i + 1));
 	if (map == NULL)
 		return (NULL);
-	map = ft_strcpy(map, s);
 	i = 0;
-	while (*(map + i++))
-		*(map + i) = f(*(map + i));
+	while (s[i] != '\0')
+	{
+		map[i] = f(s[i]);
+		i++;
+	}
+	map[i] = '\0';
 	return (map);
 }

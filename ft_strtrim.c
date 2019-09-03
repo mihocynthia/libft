@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 21:17:59 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 22:44:52 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 00:20:52 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	start = 0;
+	s = (char *)malloc(sizeof(char));
 	end = ft_strlen(s);
 	while (ft_whitespacestring(s[start]))
 		start++;

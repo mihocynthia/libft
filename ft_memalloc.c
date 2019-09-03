@@ -6,14 +6,14 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 03:13:18 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 09:21:33 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 00:48:45 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **Allocates (with malloc(3)) and returns a “fresh” memory area. The memory
 **allocated is initialized to 0. If the alloca- tion fails, the function
-**returns NULL.
+**returns NULL. Memory of size that needs to be allocated.
 */
 
 #include "libft.h"
