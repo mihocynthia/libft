@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mallocword.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyluu <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 23:14:48 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 23:21:51 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 23:44:04 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_mallocword(char const *s, char c)
 	char	*word;
 
 	let = 0;
-	while (!s[let] && !s[let] != c)
+	while (!s[let] && s[let] != c)
 		let++;
 	word = (char *)malloc(sizeof(char) * (let + 1));
 	if (word == NULL)
