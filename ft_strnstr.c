@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 14:27:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 20:49:33 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 21:37:52 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *bg, const char *sm, size_t len)
 {
 	size_t	needle_len;
 	char	*haystack;
 	char	*needle;
 
-	haystack = (char *)big;
-	needle = (char *)little;
-	needle_len = ft_strlen(little);
+	haystack = (char *)bg;
+	needle = (char *)sm;
+	needle_len = ft_strlen(sm);
 	if (!needle || !*needle)
 		return (haystack);
 	while (*haystack != '\0' && len--)
