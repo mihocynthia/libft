@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:05:12 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 09:57:25 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 19:16:18 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char	**take;
+	char	**t;
 	int		r1;
 	int		r2;
 	int		r3;
@@ -22,8 +22,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	take = (char **)ft_memalloc((ft_countwords(s, c) + 1) * sizeof(char *));
-	if (!take)
+	if (!(t = (char **)ft_memalloc((ft_countword(s, c) + 1) * sizeof(char *))))
 		return (NULL);
 	r1 = 0;
 	r2 = 0;
@@ -32,12 +31,12 @@ char	**ft_strsplit(char const *s, char c)
 	while (s[r1++])
 	{
 		if (r2 && s[r1] == c)
-			take[r3++] = ft_strsub(s, r4, r1 - r4);
+			t[r3++] = ft_strsub(s, r4, r1 - r4);
 		if (!r2 && s[r1] != c)
 			r4 = r3;
 		r2 = (s[r1] == c) ? 0 : 1;
 	}
 	if (r2)
-		take[r1] = ft_strsub(s, r4, r1 - r4);
-	return (take);
+		t[r1] = ft_strsub(s, r4, r1 - r4);
+	return (t);
 }

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:31:36 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 09:49:19 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/02 19:01:23 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char		*ft_strtrim(char const *s);
 int			ft_whitespacestring(char c);
-int			ft_countwords(const char *s, char c);
+int			ft_countword(const char *s, char c);
 int			ft_numbercount(int c);
 int			ft_otherwhitespacingstring(char c);
 char		*ft_removestringextraspacing(char c);
