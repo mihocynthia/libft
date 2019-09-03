@@ -6,17 +6,20 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 02:41:13 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 18:32:45 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 09:33:11 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
+	unsigned int		i;
 
 	i = 0;
 	if (!s || !f)
 		return ;
 	while (s[i])
-		f(i++, s);
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
