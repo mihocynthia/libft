@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 03:05:12 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/02 23:53:16 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 13:14:07 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_strsplit(char const *s, char c)
 	r1 = 0;
 	if (!s)
 		return (NULL);
-	t = (char **)ft_memalloc(sizeof (char *) * (ft_countword(s, c) + 1));
+	t = (char **)ft_memalloc(sizeof(char *) * (ft_countword(s, c) + 1));
 	if (!t)
 		return (NULL);
 	while (*s != '\0')
@@ -35,6 +35,6 @@ char	**ft_strsplit(char const *s, char c)
 				s++;
 		}
 	}
-	t[r1] = 0;
+	t[r1] = NULL;
 	return (t);
 }

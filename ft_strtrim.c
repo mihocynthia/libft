@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 21:17:59 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 09:55:19 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 12:25:20 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strtrim(char const *s)
 	int		start;
 	int		end;
 	size_t	len;
+	char	*str;
 
 	start = 0;
 	if (!s)
@@ -24,10 +25,14 @@ char	*ft_strtrim(char const *s)
 	end = ft_strlen(s);
 	while (ft_whitespacestring(s[start]))
 		start++;
-	while (ft_whitespacestring(s[end]))
+	while (ft_whitespacestring(s[end - 1]))
 		end--;
 	if (start > end)
 		start = end;
 	len = end - start;
-	return (ft_strsub(s, start, len));
+	str = ft_strsub(s, start, len);
+	if(str == NULL)
+		return NULL;
+	str[len] = '\0';
+	return (str);
 }

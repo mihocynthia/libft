@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 03:20:49 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 20:53:31 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 13:24:54 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	{
 		i++;
 	}
-	while (s2_return[j] != '\0' && j < (n - 1))
+	while (s2_return[j] != '\0' && j < n)
 	{
-		s1_return[i++] = s2_return[j++];
+		s1_return[i] = s2_return[j];
+		j++;
+		i++;
 	}
-	s1_return[i] = s2_return[j];
+	s1_return[i] = '\0';
 	return ((char *)s1_return);
 }
