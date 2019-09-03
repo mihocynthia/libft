@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 15:18:00 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 19:48:59 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 14:18:15 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		c;
 
+	if(n == -2147483648)
+		return(ft_strdup("-2147483648"));
 	awsr = n;
 	sig = (n < 0) ? ft_numbercount(n) + 1 : ft_numbercount(n);
-	str = ft_strnew(sig);
+	str = ft_strnew(sig + 1);
 	if (!str)
 		return (NULL);
+	ft_bzero(str, sig);
 	while (sig--)
 	{
 		c = awsr % 10;
