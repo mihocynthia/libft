@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 21:19:59 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 03:13:40 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 19:07:53 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	unsigned int	pts;
 
+	if (!s || !(*f))
+		return ;
 	pts = 0;
 	if (s && f == NULL)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 23:12:40 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 15:02:12 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 20:47:03 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	size_t	i;
-	size_t	d;
+	size_t	lgth;
+	size_t	final;
 
-	i = 0;
-	d = dsize - ft_strlen(dst);
-	if ((*dst != '\0') && (*src != '\0'))
+	lgth = ft_strlen(dst);
+	if (dsize <= lgth)
+		return (dsize + ft_strlen(src));
+	final = (dsize - lgth - 1);
+	while (final > 0 && *src)
 	{
-		while ((*dst != '\0'))
-			dst++;
-		while (*src != '\0' && i < d)
-		{
-			i++;
-			*dst++ = *src++;
-		}
-		*dst = '\0';
+		dst[lgth++] = *(src++);
+		final--;
 	}
-	return (i + dsize);
-}
+	dst[lgth] = '\0';
+	return (lgth + ft_strlen(src));
+} 
+
+
+	

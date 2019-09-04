@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 17:02:32 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/01 18:38:10 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 19:26:16 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	int		check;
 
+	if (!s1 || !s2)
+		return (0);
 	check = ft_strcmp((char*)s1, (char*)s2);
 	if (check == 0)
 		return (1);

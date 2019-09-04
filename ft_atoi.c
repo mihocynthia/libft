@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 11:49:38 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 17:56:09 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 19:38:58 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,24 @@ int	ft_atoi(const char *str)
 
 	awsr = 0;
 	sig = 1;
-	if (str)
+
+	while (*str == ' ' || *str == '\f' || *str == '\r' ||
+			*str == '\n' || *str == '\t' || *str == '\v')
+		str++;
+	if (*str == '+')
 	{
-		while (*str == ' ' || *str == '\f' || *str == '\r' ||
-				*str == '\n' || *str == '\t' || *str == '\v')
-			str++;
-		if (*str == '+')
-		{
-			sig = 1;
-			str++;
-		}
-		else if (*str == '-')
-		{
-			sig = -1;
-			str++;
-		}
-		while (*str && (*str >= '0' && *str <= '9'))
-		{
-			awsr = (awsr * 10) + (*str - '0');
-			str++;
-		}
+		sig = 1;
+		str++;
+	}
+	else if (*str == '-')
+	{
+		sig = -1;
+		str++;
+	}
+	while (*str && (*str >= '0' && *str <= '9'))
+	{
+		awsr = (awsr * 10) + (*str - '0');
+		str++;
 	}
 	return (sig * awsr);
-}
-
-int main(void)
-{
-	printf("%d\n", "-2147483648");
-	return (0);
 }
