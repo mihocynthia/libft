@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 14:27:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 12:53:26 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 17:54:52 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *bg, const char *sm, size_t len)
 	haystack = (char *)bg;
 	needle = (char *)sm;
 	needle_len = ft_strlen(sm);
-	if (!needle || !*needle || len == 0)
+	if ((!len || !haystack) && (!*needle || !needle))
 		return (haystack);
 	while (*haystack != '\0' && len)
 	{

@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 22:29:10 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 14:38:37 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 17:33:09 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	size = 0;
 	if (!s1 && !s2)
-		return (-1);
+		return (0);
 	s1_ret = (unsigned char *)s1;
 	s2_ret = (unsigned char *)s2;
 	while (size < n)

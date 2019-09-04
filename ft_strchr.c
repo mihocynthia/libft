@@ -6,15 +6,11 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 17:27:28 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/30 00:01:13 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 15:10:44 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** 7 failed 3 okays
-*/
 
 char	*ft_strchr(const char *s, int c)
 {

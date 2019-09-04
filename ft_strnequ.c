@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 17:40:53 by cyluu             #+#    #+#             */
-/*   Updated: 2019/08/29 16:23:22 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 17:25:53 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int		check;
 
+	if (!n)
+		return (1);
 	check = ft_strncmp(s1, s2, n);
 	if (check == 0)
 	{
