@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 23:12:40 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 20:47:03 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 21:17:13 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	}
 	dst[lgth] = '\0';
 	return (lgth + ft_strlen(src));
-} 
-
-
-	
+}

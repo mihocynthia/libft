@@ -6,7 +6,7 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 16:15:55 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 17:54:58 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 21:21:17 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	//const char	*str;
-	unsigned char *str;
-	size_t		i;
+	unsigned char	*str;
+	size_t			i;
 
 	i = 0;
 	str = (unsigned char*)s;

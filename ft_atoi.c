@@ -6,20 +6,19 @@
 /*   By: cyluu <cyluu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 11:49:38 by cyluu             #+#    #+#             */
-/*   Updated: 2019/09/03 19:38:58 by cyluu            ###   ########.fr       */
+/*   Updated: 2019/09/03 21:18:42 by cyluu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int		sig;
 	int		awsr;
 
 	awsr = 0;
 	sig = 1;
-
 	while (*str == ' ' || *str == '\f' || *str == '\r' ||
 			*str == '\n' || *str == '\t' || *str == '\v')
 		str++;
